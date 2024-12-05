@@ -8,179 +8,33 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="nav-container">
         <ul class="nav-menu">
-            <li class="nav-item">家居收纳</li>
-            <li class="nav-item">厨房小工具</li>
-            <li class="nav-item">浴室用品</li>
-            <li class="nav-item">家务清洁</li>
-            <li class="nav-item">宠物用品</li>
-            <li class="nav-item">汽车用品</li>
-            <li class="nav-item">办公用品</li>
-            <li class="nav-item">个人护理</li>
+            <li class="nav-item" data-category="home">家居收纳</li>
+            <li class="nav-item" data-category="kitchen">厨房小工具</li>
+            <li class="nav-item" data-category="bathroom">浴室用品</li>
+            <li class="nav-item" data-category="cleaning">家务清洁</li>
+            <li class="nav-item" data-category="pet">宠物用品</li>
+            <li class="nav-item" data-category="car">汽车用品</li>
+            <li class="nav-item" data-category="office">办公用品</li>
+            <li class="nav-item" data-category="personal">个人护理</li>
         </ul>
     </nav>
 
-    <!-- 主内容区 -->
     <main class="main-content">
-        <!-- 家居收纳类别展示 -->
-        <section class="category-section">
-            <h2 class="category-title">家居收纳</h2>
-            <div class="product-grid">
-                <!-- ���屉分隔收纳盒 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="抽屉分隔收纳盒" class="product-image">
-                    <h3 class="product-name">多功能抽屉分隔收纳盒</h3>
-                    <p class="product-price">均价: $12.99</p>
-                    <div class="product-features">
-                        <p>✓ 适用于化妆品/文具/厨具</p>
-                        <p>✓ 可自由组合</p>
-                        <p>✓ 环保PP材质</p>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="platformChart1"></canvas>
-                    </div>
-                    <button class="btn">查看详情</button>
-                </div>
-
-                <!-- 衣柜悬挂式收纳袋 -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x200" alt="衣柜悬挂式收纳袋" class="product-image">
-                    <h3 class="product-name">衣柜悬挂式收纳袋</h3>
-                    <p class="product-price">均价: $15.99</p>
-                    <div class="product-features">
-                        <p>✓ 大容量设计</p>
-                        <p>✓ 防尘防潮</p>
-                        <p>✓ 加固挂钩</p>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="platformChart2"></canvas>
-                    </div>
-                    <button class="btn">查看详情</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 市场分析区域 -->
-        <section class="analysis-section">
-            <h2 class="category-title">市场分析</h2>
-            <div class="analysis-grid">
-                <div class="chart-container">
-                    <h3>价格趋势分析</h3>
-                    <canvas id="trendChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3>平台销量对比</h3>
-                    <canvas id="salesChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3>季节性需求分析</h3>
-                    <canvas id="seasonChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- 选品建议区域 -->
-        <section class="recommendation-section">
-            <h2 class="category-title">选品建议</h2>
-            <div class="recommendation-grid">
-                <div class="recommendation-card">
-                    <h3>价格定位</h3>
-                    <ul>
-                        <li>主打10-30美元区间</li>
-                        <li>高性价比为主</li>
-                        <li>预留促销空间</li>
-                    </ul>
-                </div>
-                <div class="recommendation-card">
-                    <h3>产品特点</h3>
-                    <ul>
-                        <li>注重功能创新</li>
-                        <li>确保使用便利性</li>
-                        <li>突出解决痛点</li>
-                    </ul>
-                </div>
-                <div class="recommendation-card">
-                    <h3>市场机会</h3>
-                    <ul>
-                        <li>填补SHEIN空白</li>
-                        <li>避开竞争激烈品类</li>
-                        <li>关注季节性需求</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <!-- 内容区域将在后续添加 -->
     </main>
 
     <script>
-        // 平台销售比重图表
-        function createPlatformChart(canvasId) {
-            const ctx = document.getElementById(canvasId).getContext('2d');
-            new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: ['1688', 'TEMU', '亚马逊', 'SHEIN'],
-                    datasets: [{
-                        data: [30, 25, 25, 20],
-                        backgroundColor: [
-                            '#FF6384',
-                            '#36A2EB',
-                            '#FFCE56',
-                            '#4BC0C0'
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'bottom'
-                        }
-                    }
-                }
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
             });
-        }
-
-        // 初始化图表
-        window.onload = function() {
-            createPlatformChart('platformChart1');
-            createPlatformChart('platformChart2');
-            
-            // 价格趋势图
-            const trendCtx = document.getElementById('trendChart').getContext('2d');
-            new Chart(trendCtx, {
-                type: 'line',
-                data: {
-                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
-                    datasets: [{
-                        label: '价格趋势',
-                        data: [280, 290, 285, 295, 300, 299],
-                        borderColor: '#007bff'
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-
-            // 销量对比图
-            const salesCtx = document.getElementById('salesChart').getContext('2d');
-            new Chart(salesCtx, {
-                type: 'bar',
-                data: {
-                    labels: ['1688', 'TEMU', '亚马逊', 'SHEIN'],
-                    datasets: [{
-                        label: '月销量',
-                        data: [1200, 800, 600, 400],
-                        backgroundColor: '#28a745'
-                    }]
-                },
-                options: {
-                    responsive: true
-                }
-            });
-        };
+        });
+    });
     </script>
 </body>
 </html>
