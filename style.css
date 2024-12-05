@@ -33,216 +33,173 @@ body {
     align-items: center;
     height: 44px;
     padding: 0 22px;
+    list-style: none;
 }
 
 .nav-item {
-    font-size: 12px;
+    font-size: 14px;
     color: #1d1d1f;
     cursor: pointer;
-    transition: color 0.3s ease;
-    padding: 0 10px;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
     opacity: 0.8;
 }
 
 .nav-item:hover {
     opacity: 1;
     color: #0066cc;
+    background-color: rgba(0, 102, 204, 0.1);
+}
+
+.nav-item.active {
+    color: #fff;
+    background-color: #0066cc;
+    opacity: 1;
 }
 
 /* 主内容区样式 */
 .main-content {
-    max-width: 980px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 22px;
+    padding: 40px 22px;
 }
 
-/* 产品类别展示 */
-.category-section {
-    margin: 80px 0;
-}
-
-.category-title {
-    font-size: 48px;
-    line-height: 1.08349;
-    font-weight: 600;
-    letter-spacing: -.003em;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-/* 产品网格布局 */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+.category-content {
+    background: #f5f5f7;
+    border-radius: 30px;
+    padding: 40px;
+    margin-top: 20px;
 }
 
 /* 产品卡片样式 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
 .product-card {
     background: #fff;
-    border-radius: 18px;
-    padding: 30px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e5e5e7;
 }
 
 .product-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.product-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.product-name {
-    font-size: 24px;
-    line-height: 1.16667;
-    font-weight: 600;
-    letter-spacing: .009em;
-    margin-bottom: 8px;
-}
-
-.product-price {
-    font-size: 17px;
-    line-height: 1.47059;
-    font-weight: 400;
-    letter-spacing: -.022em;
-    color: #1d1d1f;
-    margin-bottom: 12px;
-}
-
-/* 产品特性列表 */
-.product-features {
-    margin: 20px 0;
-    font-size: 14px;
-    color: #86868b;
-}
-
-.product-features p {
-    margin: 8px 0;
-    display: flex;
-    align-items: center;
-}
-
-/* 按钮样式 */
-.btn {
-    background: #0071e3;
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.42859;
-    font-weight: 400;
-    letter-spacing: -.016em;
-    padding: 8px 16px;
-    border-radius: 980px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background: #0077ED;
-}
-
-/* 数据分析区域 */
-.analysis-section {
-    background: #f5f5f7;
-    border-radius: 30px;
-    padding: 60px 40px;
-    margin: 80px 0;
-}
-
-.chart-container {
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
-}
-
-.chart-container h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #1d1d1f;
-}
-
-/* 选品建议区域 */
-.recommendation-section {
-    margin: 80px 0;
-}
-
-.recommendation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.recommendation-card {
-    background: #fff;
-    border-radius: 18px;
-    padding: 30px;
-    border: 1px solid #e5e5e7;
-}
-
-.recommendation-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1d1d1f;
-    margin-bottom: 20px;
-}
-
-.recommendation-card ul {
-    list-style: none;
-}
-
-.recommendation-card li {
-    font-size: 14px;
-    color: #86868b;
-    margin: 12px 0;
-    padding-left: 24px;
-    position: relative;
-}
-
-.recommendation-card li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: #0066cc;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* 响应式设计 */
 @media (max-width: 834px) {
     .nav-menu {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding: 0 10px;
     }
     
-    .product-grid,
-    .recommendation-grid {
-        grid-template-columns: 1fr;
+    .nav-item {
+        white-space: nowrap;
+        margin: 0 5px;
     }
-    
-    .category-title {
-        font-size: 40px;
-    }
-}
 
-@media (max-width: 734px) {
-    .category-title {
-        font-size: 32px;
+    .main-content {
+        padding: 20px 15px;
     }
-    
-    .product-card {
+
+    .category-content {
         padding: 20px;
     }
-    
-    .analysis-section {
-        padding: 40px 20px;
-    }
+} 
+
+/* 添加市场分析相关样式 */
+.market-overview {
+    padding: 40px;
+    background: #f5f5f7;
+    border-radius: 30px;
 }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0066cc;
+    margin: 10px 0;
+}
+
+.growth {
+    color: #34c759;
+    font-weight: 500;
+}
+
+.price-analysis {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+
+.platform-share {
+    margin: 20px 0;
+}
+
+.key-metrics {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.key-metrics p {
+    color: #666;
+    margin: 8px 0;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.insight-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.key-points, .consumer-insights {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.key-points li, .consumer-insights li {
+    margin: 10px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.key-points li:before, .consumer-insights li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+} 
