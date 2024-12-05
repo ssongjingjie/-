@@ -22,19 +22,1961 @@
     </nav>
 
     <main class="main-content">
-        <!-- 内容区域将在后续添加 -->
+        <div class="category-content" id="home-content">
+            <div class="market-overview">
+                <h2>家居收纳市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$247亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 12.3%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">37%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">45%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 抽屉分隔收纳盒 -->
+                    <div class="product-card">
+                        <img src="images/drawer-organizer.jpg" alt="抽屉分隔收纳盒" class="product-image">
+                        <h3 class="product-name">多功能抽屉分隔收纳盒</h3>
+                        <p class="product-price">$12.99</p>
+                        <div class="product-features">
+                            <p>✓ 适用于化妆品、文具、厨具</p>
+                            <p>✓ 可自由组合的隔断设计</p>
+                            <p>✓ 环保PP材质</p>
+                            <p>✓ 防滑底部设计</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 衣柜悬挂式收纳袋 -->
+                    <div class="product-card">
+                        <img src="images/hanging-organizer.jpg" alt="衣柜悬挂式收纳袋" class="product-image">
+                        <h3 class="product-name">多层衣柜悬挂收纳袋</h3>
+                        <p class="product-price">$15.99</p>
+                        <div class="product-features">
+                            <p>✓ 加厚牛津布材质</p>
+                            <p>✓ 6层大容量设计</p>
+                            <p>✓ 防尘透明窗口</p>
+                            <p>✓ 加固挂钩</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 床底收纳箱 -->
+                    <div class="product-card">
+                        <img src="images/underbed-storage.jpg" alt="床底收纳箱" class="product-image">
+                        <h3 class="product-name">可折叠床底收纳箱</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="product-features">
+                            <p>✓ 可折叠节省空间</p>
+                            <p>✓ 防水防潮</p>
+                            <p>✓ 透明视窗设计</p>
+                            <p>✓ 加固拉链</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 多层旋转化妆品收纳盒 -->
+                    <div class="product-card">
+                        <img src="images/rotating-organizer.jpg" alt="多层旋转化妆品收纳盒" class="product-image">
+                        <h3 class="product-name">360°旋转化妆品收纳盒</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-features">
+                            <p>✓ 360度旋转底座</p>
+                            <p>✓ 多层收纳空间</p>
+                            <p>✓ 防滑垫设计</p>
+                            <p>✓ 可调节隔板</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 桌面文具收纳架 -->
+                    <div class="product-card">
+                        <img src="images/desk-organizer.jpg" alt="桌面文具收纳架" class="product-image">
+                        <h3 class="product-name">多功能桌面文具收纳架</h3>
+                        <p class="product-price">$16.99</p>
+                        <div class="product-features">
+                            <p>✓ 北欧简约设计</p>
+                            <p>✓ 多格收纳空间</p>
+                            <p>✓ 手机支架功能</p>
+                            <p>✓ 防滑底部</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="priceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="platformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>主打10-30美元区间</li>
+                            <li>保持高性价比</li>
+                            <li>预留促销空间</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>注重功能创新</li>
+                            <li>确保使用便利性</li>
+                            <li>突出解决痛点</li>
+                            <li>重视产品质量</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>填补SHEIN空白</li>
+                            <li>避开竞争激烈品类</li>
+                            <li>选择成长性品类</li>
+                            <li>关注季节性需求</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="kitchen-content" style="display: none;">
+            <div class="market-overview">
+                <h2>厨房小工具市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$186亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 15.7%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">42%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">52%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 多功能切菜神器 -->
+                    <div class="product-card">
+                        <img src="images/vegetable-cutter.jpg" alt="多功能切菜神器" class="product-image">
+                        <h3 class="product-name">多功能切菜神器</h3>
+                        <p class="product-price">$14.99</p>
+                        <div class="product-features">
+                            <p>✓ 8合1多功能设计</p>
+                            <p>✓ 食品级PP材质</p>
+                            <p>✓ 可调节切片厚度</p>
+                            <p>✓ 防滑底座设计</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 厨余垃圾过滤网 -->
+                    <div class="product-card">
+                        <img src="images/sink-strainer.jpg" alt="厨余垃圾过滤网" class="product-image">
+                        <h3 class="product-name">高效厨余垃圾过滤网</h3>
+                        <p class="product-price">$11.99</p>
+                        <div class="product-features">
+                            <p>✓ 双层过滤设计</p>
+                            <p>✓ 不锈钢材质</p>
+                            <p>✓ 防堵塞结构</p>
+                            <p>✓ 易清洁维护</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 可折叠硅胶沥水篮 -->
+                    <div class="product-card">
+                        <img src="images/collapsible-colander.jpg" alt="可折叠硅胶沥水篮" class="product-image">
+                        <h3 class="product-name">创新折叠沥水篮</h3>
+                        <p class="product-price">$16.99</p>
+                        <div class="product-features">
+                            <p>✓ 可折叠节省空间</p>
+                            <p>✓ 食品级硅胶</p>
+                            <p>✓ 多功能设计</p>
+                            <p>✓ 稳固支撑脚</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 冰箱收纳盒 -->
+                    <div class="product-card">
+                        <img src="images/fridge-organizer.jpg" alt="冰箱收纳盒" class="product-image">
+                        <h3 class="product-name">多用途冰箱收纳盒</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="product-features">
+                            <p>✓ 抽屉式设计</p>
+                            <p>✓ 透明可视</p>
+                            <p>✓ 可叠加使用</p>
+                            <p>✓ 防滑卡扣</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 便携式封口机 -->
+                    <div class="product-card">
+                        <img src="images/bag-sealer.jpg" alt="便携式封口机" class="product-image">
+                        <h3 class="product-name">迷你便携封口机</h3>
+                        <p class="product-price">$13.99</p>
+                        <div class="product-features">
+                            <p>✓ 快速热封</p>
+                            <p>✓ 电池供电</p>
+                            <p>✓ 轻巧便携</p>
+                            <p>✓ 适用多种袋型</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="kitchenPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="kitchenTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="kitchenPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>主打10-25美元区间</li>
+                            <li>突出性价比优势</li>
+                            <li>合理定价策略</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>多功能创新设计</li>
+                            <li>食品级安全材质</li>
+                            <li>便携收纳功能</li>
+                            <li>清洁维护便利</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>把握宅经济机遇</li>
+                            <li>迎合健康饮食趋势</li>
+                            <li>注重创新功能</li>
+                            <li>关注节日促销</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="bathroom-content" style="display: none;">
+            <div class="market-overview">
+                <h2>浴室用品市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$165亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 13.8%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">39%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">48%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 强力吸盘置物架 -->
+                    <div class="product-card">
+                        <img src="images/suction-shelf.jpg" alt="强力吸盘置物架" class="product-image">
+                        <h3 class="product-name">强力吸盘置物架</h3>
+                        <p class="product-price">$15.99</p>
+                        <div class="product-features">
+                            <p>✓ 无痕安装设计</p>
+                            <p>✓ 超强承重力</p>
+                            <p>✓ 防水防锈</p>
+                            <p>✓ 可重复使用</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 智能电动牙刷 -->
+                    <div class="product-card">
+                        <img src="images/electric-toothbrush.jpg" alt="智能电���牙刷" class="product-image">
+                        <h3 class="product-name">智能声波电动牙刷</h3>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-features">
+                            <p>✓ 智能压力感应</p>
+                            <p>✓ 多种清洁模式</p>
+                            <p>✓ 防水IPX7级别</p>
+                            <p>✓ 超长续航</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 浴室角落三角收纳架 -->
+                    <div class="product-card">
+                        <img src="images/corner-shelf.jpg" alt="浴室角落三角收纳架" class="product-image">
+                        <h3 class="product-name">免打孔三角收纳架</h3>
+                        <p class="product-price">$18.99</p>
+                        <div class="product-features">
+                            <p>✓ 创新三角设计</p>
+                            <p>✓ 强力粘胶固定</p>
+                            <p>✓ 大容量储物</p>
+                            <p>✓ 防水防霉</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 防水时钟 -->
+                    <div class="product-card">
+                        <img src="images/waterproof-clock.jpg" alt="防水时钟" class="product-image">
+                        <h3 class="product-name">浴室防水电子钟</h3>
+                        <p class="product-price">$12.99</p>
+                        <div class="product-features">
+                            <p>✓ IP67防水等级</p>
+                            <p>✓ 温湿度显示</p>
+                            <p>✓ 强力吸盘</p>
+                            <p>✓ 大屏显示</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 硅胶地漏防堵器 -->
+                    <div class="product-card">
+                        <img src="images/drain-protector.jpg" alt="硅胶地漏防堵器" class="product-image">
+                        <h3 class="product-name">创新防堵地漏器</h3>
+                        <p class="product-price">$9.99</p>
+                        <div class="product-features">
+                            <p>✓ 食品级硅胶</p>
+                            <p>✓ 双层过滤</p>
+                            <p>✓ 防臭设计</p>
+                            <p>✓ 易清洁</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="bathroomPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="bathroomTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="bathroomPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>智能产品20-35美元</li>
+                            <li>日用品8-20美元</li>
+                            <li>注重高性价比</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>防水防霉设计</li>
+                            <li>安装便捷性</li>
+                            <li>智能化功��</li>
+                            <li>环保材质</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>智能化升级需求</li>
+                            <li>空间收纳痛点</li>
+                            <li>防水防霉市场</li>
+                            <li>环保节水趋势</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="cleaning-content" style="display: none;">
+            <div class="market-overview">
+                <h2>家务清洁工具市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$142亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 11.5%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">45%</p>
+                        <p class="stat-desc">跨境电���销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">55%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 可伸缩缝隙清洁刷 -->
+                    <div class="product-card">
+                        <img src="images/gap-brush.jpg" alt="可伸缩缝隙清洁刷" class="product-image">
+                        <h3 class="product-name">多功能缝隙清洁刷</h3>
+                        <p class="product-price">$13.99</p>
+                        <div class="product-features">
+                            <p>✓ 可伸缩设计</p>
+                            <p>✓ 多角度清洁</p>
+                            <p>✓ 防滑手柄</p>
+                            <p>✓ 耐用尼龙刷毛</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 多功能除尘掸 -->
+                    <div class="product-card">
+                        <img src="images/duster.jpg" alt="多功能除尘掸" class="product-image">
+                        <h3 class="product-name">静电除尘掸</h3>
+                        <p class="product-price">$11.99</p>
+                        <div class="product-features">
+                            <p>✓ 超细纤维材质</p>
+                            <p>✓ 可弯曲设计</p>
+                            <p>✓ 伸缩杆调节</p>
+                            <p>✓ 可水洗</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 玻璃清洁器 -->
+                    <div class="product-card">
+                        <img src="images/glass-cleaner.jpg" alt="玻璃清洁器" class="product-image">
+                        <h3 class="product-name">双面玻璃清洁器</h3>
+                        <p class="product-price">$21.99</p>
+                        <div class="product-features">
+                            <p>✓ 磁力双面设计</p>
+                            <p>✓ 防摔安全绳</p>
+                            <p>✓ 超强吸附力</p>
+                            <p>✓ 适用多种厚度</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 电动清洁刷 -->
+                    <div class="product-card">
+                        <img src="images/electric-brush.jpg" alt="电动清洁刷" class="product-image">
+                        <h3 class="product-name">多功能电动清洁刷</h3>
+                        <p class="product-price">$25.99</p>
+                        <div class="product-features">
+                            <p>✓ 4种清洁头</p>
+                            <p>✓ IPX7防水</p>
+                            <p>✓ 无线充电</p>
+                            <p>✓ 3档力度调节</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 可重复使用清洁布 -->
+                    <div class="product-card">
+                        <img src="images/reusable-cloth.jpg" alt="可重复使用清洁布" class="product-image">
+                        <h3 class="product-name">环保清洁抹布套装</h3>
+                        <p class="product-price">$16.99</p>
+                        <div class="product-features">
+                            <p>✓ 竹纤维材质</p>
+                            <p>✓ 强效去污</p>
+                            <p>✓ 可重复使用</p>
+                            <p>✓ 快速吸水</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="cleaningPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="cleaningTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="cleaningPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>电动产品20-30美元</li>
+                            <li>手动工具10-20美元</li>
+                            <li>耗材类8-15美元</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>多功能组合</li>
+                            <li>人体工学设计</li>
+                            <li>环保可持续</li>
+                            <li>便携收纳</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>智能化清洁需求</li>
+                            <li>环保材质趋势</li>
+                            <li>多功能整合</li>
+                            <li>便携性市场</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="pet-content" style="display: none;">
+            <div class="market-overview">
+                <h2>宠物用品市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$235亿</p>
+                        <p class="stat-desc">2023年全球市场���模</p>
+                        <p class="growth">年增长率 16.8%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">41%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">58%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 自动喂食器 -->
+                    <div class="product-card">
+                        <img src="images/pet-feeder.jpg" alt="自动喂食器" class="product-image">
+                        <h3 class="product-name">智能自动喂食器</h3>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-features">
+                            <p>✓ APP远程控制</p>
+                            <p>✓ 定时投喂</p>
+                            <p>✓ 大容量储</p>
+                            <p>✓ 防潮保鲜</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 宠物毛发清理器 -->
+                    <div class="product-card">
+                        <img src="images/pet-hair-remover.jpg" alt="宠物毛发清理器" class="product-image">
+                        <h3 class="product-name">多功能毛发清理器</h3>
+                        <p class="product-price">$15.99</p>
+                        <div class="product-features">
+                            <p>✓ 双面清理设计</p>
+                            <p>✓ 自清洁底座</p>
+                            <p>✓ 适用多种表面</p>
+                            <p>✓ 可重复使用</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 便携式饮水器 -->
+                    <div class="product-card">
+                        <img src="images/pet-water-bottle.jpg" alt="便携式饮水器" class="product-image">
+                        <h3 class="product-name">外出便携饮水器</h3>
+                        <p class="product-price">$12.99</p>
+                        <div class="product-features">
+                            <p>✓ 一键出水</p>
+                            <p>✓ 防漏设计</p>
+                            <p>✓ 食品级材质</p>
+                            <p>✓ 便携挂扣</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 互动玩具 -->
+                    <div class="product-card">
+                        <img src="images/pet-toy.jpg" alt="互动玩具" class="product-image">
+                        <h3 class="product-name">智能互动玩具球</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="product-features">
+                            <p>✓ 自动滚动</p>
+                            <p>✓ LED灯效</p>
+                            <p>✓ ��音互动</p>
+                            <p>✓ USB充电</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 宠物训练用品 -->
+                    <div class="product-card">
+                        <img src="images/pet-training.jpg" alt="宠物训练用品" class="product-image">
+                        <h3 class="product-name">专业训练套</h3>
+                        <p class="product-price">$23.99</p>
+                        <div class="product-features">
+                            <p>✓ 训练哨子</p>
+                            <p>✓ 奖励袋</p>
+                            <p>✓ 训练绳</p>
+                            <p>✓ 训练指南</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="petPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="petTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="petPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>智能设备25-35美元</li>
+                            <li>日常用品10-25美元</li>
+                            <li>玩具配件8-20美元</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>智能化功能</li>
+                            <li>安全环保材质</li>
+                            <li>便携实用性</li>
+                            <li>互动娱乐性</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>智能化宠物用品</li>
+                            <li>户外便携需求</li>
+                            <li>居家互动产品</li>
+                            <li>环保可持续</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="car-content" style="display: none;">
+            <div class="market-overview">
+                <h2>汽车用品市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$198亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 14.2%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">43%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">51%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 车载垃圾桶 -->
+                    <div class="product-card">
+                        <img src="images/car-trash.jpg" alt="车载垃圾桶" class="product-image">
+                        <h3 class="product-name">多功能车载垃圾桶</h3>
+                        <p class="product-price">$16.99</p>
+                        <div class="product-features">
+                            <p>✓ 防漏设计</p>
+                            <p>✓ LED夜光盖</p>
+                            <p>✓ 可折叠收纳</p>
+                            <p>✓ 防水内胆</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 汽车座椅收纳袋 -->
+                    <div class="product-card">
+                        <img src="images/car-seat-organizer.jpg" alt="汽车座椅收纳袋" class="product-image">
+                        <h3 class="product-name">座椅后背收纳袋</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="product-features">
+                            <p>✓ 大容量设计</p>
+                            <p>✓ 防水牛津布</p>
+                            <p>✓ iPad收纳位</p>
+                            <p>✓ 加固挂钩</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 车载手机支架 -->
+                    <div class="product-card">
+                        <img src="images/phone-holder.jpg" alt="车载手机支架" class="product-image">
+                        <h3 class="product-name">智能车载支架</h3>
+                        <p class="product-price">$22.99</p>
+                        <div class="product-features">
+                            <p>✓ 自动感应</p>
+                            <p>✓ 无线充电</p>
+                            <p>✓ 360度旋转</p>
+                            <p>✓ 稳固吸盘</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 车内除尘工具 -->
+                    <div class="product-card">
+                        <img src="images/car-duster.jpg" alt="车内除尘工具" class="product-image">
+                        <h3 class="product-name">多功能除尘清洁器</h3>
+                        <p class="product-price">$13.99</p>
+                        <div class="product-features">
+                            <p>✓ 可伸缩手柄</p>
+                            <p>✓ 静电吸附</p>
+                            <p>✓ 软毛清洁</p>
+                            <p>✓ 便携设计</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 后备箱收纳箱 -->
+                    <div class="product-card">
+                        <img src="images/trunk-organizer.jpg" alt="后备箱收纳箱" class="product-image">
+                        <h3 class="product-name">折叠后备箱收纳箱</h3>
+                        <p class="product-price">$25.99</p>
+                        <div class="product-features">
+                            <p>✓ 多隔层设计</p>
+                            <p>✓ 防水底部</p>
+                            <p>✓ 可折叠存储</p>
+                            <p>✓ 防滑固定</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="carPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="carTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="carPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>智能配件20-30美元</li>
+                            <li>收纳用品15-25美元</li>
+                            <li>清洁工具10-20美元</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>智能化功能</li>
+                            <li>空间利用率</li>
+                            <li>便携实用性</li>
+                            <li>耐用防水</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>智能车载设备</li>
+                            <li>车内收纳需求</li>
+                            <li>便携��洁工具</li>
+                            <li>多功能集成</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="office-content" style="display: none;">
+            <div class="market-overview">
+                <h2>办公用品市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$156亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 13.5%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">46%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">53%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 多功能笔筒 -->
+                    <div class="product-card">
+                        <img src="images/pen-holder.jpg" alt="多功能笔筒" class="product-image">
+                        <h3 class="product-name">智能多功能笔筒</h3>
+                        <p class="product-price">$18.99</p>
+                        <div class="product-features">
+                            <p>✓ 无线充电</p>
+                            <p>✓ LED时钟显示</p>
+                            <p>✓ 多格收纳</p>
+                            <p>✓ Type-C接口</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 可调节电脑支架 -->
+                    <div class="product-card">
+                        <img src="images/laptop-stand.jpg" alt="可调节电脑支架" class="product-image">
+                        <h3 class="product-name">人体工学笔记本支架</h3>
+                        <p class="product-price">$25.99</p>
+                        <div class="product-features">
+                            <p>✓ 6档高度调节</p>
+                            <p>✓ 铝合金材质</p>
+                            <p>✓ 散热设计</p>
+                            <p>✓ 便携折叠</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 人体工学鼠标垫 -->
+                    <div class="product-card">
+                        <img src="images/mouse-pad.jpg" alt="人体工学鼠标垫" class="product-image">
+                        <h3 class="product-name">记忆棉护腕鼠标垫</h3>
+                        <p class="product-price">$15.99</p>
+                        <div class="product-features">
+                            <p>✓ 记忆棉护腕</p>
+                            <p>✓ 超大尺寸</p>
+                            <p>✓ 防水涂层</p>
+                            <p>✓ 防滑底部</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 桌面收纳架 -->
+                    <div class="product-card">
+                        <img src="images/desk-organizer.jpg" alt="桌面收纳架" class="product-image">
+                        <h3 class="product-name">多层桌面收纳架</h3>
+                        <p class="product-price">$21.99</p>
+                        <div class="product-features">
+                            <p>✓ 北欧简约风</p>
+                            <p>✓ 抽屉设计</p>
+                            <p>✓ 文件分类</p>
+                            <p>✓ 可组合拆分</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 便携式文件夹 -->
+                    <div class="product-card">
+                        <img src="images/file-holder.jpg" alt="便携式文件夹" class="product-image">
+                        <h3 class="product-name">多层便携文件夹</h3>
+                        <p class="product-price">$16.99</p>
+                        <div class="product-features">
+                            <p>✓ 手提设计</p>
+                            <p>✓ 13层分类</p>
+                            <p>✓ 防水材质</p>
+                            <p>✓ A4大小</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="officePriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="officeTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="officePlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>智能产品20-30美元</li>
+                            <li>收纳用品15-25��元</li>
+                            <li>日常用品10-20美元</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>人体工学设计</li>
+                            <li>智能化功能</li>
+                            <li>空间整理</li>
+                            <li>便携性强</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>居家办公需求</li>
+                            <li>学生市场潜力</li>
+                            <li>智能办公趋势</li>
+                            <li>整理收纳热点</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-content" id="personal-content" style="display: none;">
+            <div class="market-overview">
+                <h2>个人护理工具市场分析</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>市场规模</h3>
+                        <p class="stat-number">$223亿</p>
+                        <p class="stat-desc">2023年全球市场规模</p>
+                        <p class="growth">年增长率 15.6%</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>跨境占比</h3>
+                        <p class="stat-number">44%</p>
+                        <p class="stat-desc">跨境电商销售占比</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>利润率</h3>
+                        <p class="stat-number">56%</p>
+                        <p class="stat-desc">平均毛利率</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-section">
+                <h2>热门产品推荐</h2>
+                <div class="product-grid">
+                    <!-- 美容按摩仪 -->
+                    <div class="product-card">
+                        <img src="images/beauty-massager.jpg" alt="美容按摩仪" class="product-image">
+                        <h3 class="product-name">智能美容按摩仪</h3>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-features">
+                            <p>✓ 多种按摩模式</p>
+                            <p>✓ 离子导入</p>
+                            <p>✓ LED光疗</p>
+                            <p>✓ IPX7防水</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 便携式卷发棒 -->
+                    <div class="product-card">
+                        <img src="images/hair-curler.jpg" alt="便携式卷发棒" class="product-image">
+                        <h3 class="product-name">无线便携卷发棒</h3>
+                        <p class="product-price">$25.99</p>
+                        <div class="product-features">
+                            <p>✓ 无线设计</p>
+                            <p>✓ 陶瓷涂层</p>
+                            <p>✓ 温度可调</p>
+                            <p>✓ 快速加热</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 电动洗脸仪 -->
+                    <div class="product-card">
+                        <img src="images/face-cleaner.jpg" alt="电动洗脸仪" class="product-image">
+                        <h3 class="product-name">声波洗脸仪</h3>
+                        <p class="product-price">$21.99</p>
+                        <div class="product-features">
+                            <p>✓ 声波震动</p>
+                            <p>✓ 硅胶刷头</p>
+                            <p>✓ 5档调节</p>
+                            <p>✓ 防水设计</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 美甲工具套装 -->
+                    <div class="product-card">
+                        <img src="images/nail-kit.jpg" alt="美甲工具套装" class="product-image">
+                        <h3 class="product-name">专业美甲套装</h3>
+                        <p class="product-price">$19.99</p>
+                        <div class="product-features">
+                            <p>✓ 18件套装</p>
+                            <p>✓ 不锈钢材质</p>
+                            <p>✓ 便携收纳盒</p>
+                            <p>✓ 防滑手柄</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+
+                    <!-- 修眉工具套装 -->
+                    <div class="product-card">
+                        <img src="images/eyebrow-kit.jpg" alt="修眉工具套装" class="product-image">
+                        <h3 class="product-name">精致修眉套装</h3>
+                        <p class="product-price">$15.99</p>
+                        <div class="product-features">
+                            <p>✓ LED补光</p>
+                            <p>✓ 电动修剪</p>
+                            <p>✓ 多功能组合</p>
+                            <p>✓ 充电设计</p>
+                        </div>
+                        <button class="btn">查看详情</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analysis-section">
+                <h2>市场分析</h2>
+                <div class="chart-container">
+                    <h3>产品价格分布</h3>
+                    <canvas id="personalPriceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>销售趋势分析</h3>
+                    <canvas id="personalTrendChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>平台占比分析</h3>
+                    <canvas id="personalPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recommendation-section">
+                <h2>选品策略建议</h2>
+                <div class="recommendation-grid">
+                    <div class="recommendation-card">
+                        <h3>价格定位</h3>
+                        <ul>
+                            <li>智能美容20-35美元</li>
+                            <li>电动工具15-25美元</li>
+                            <li>套装产品10-20美元</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>产品特点</h3>
+                        <ul>
+                            <li>智能科技感</li>
+                            <li>便携性设计</li>
+                            <li>多功能组合</li>
+                            <li>安全防水</li>
+                        </ul>
+                    </div>
+                    <div class="recommendation-card">
+                        <h3>市场机会</h3>
+                        <ul>
+                            <li>美容仪器需求</li>
+                            <li>居家美容趋势</li>
+                            <li>智能化升级</li>
+                            <li>套装组合热点</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const navItems = document.querySelectorAll('.nav-item');
+        const contentAreas = document.querySelectorAll('.category-content');
+
         navItems.forEach(item => {
             item.addEventListener('click', function() {
+                // 移除所有导航项的活动状态
                 navItems.forEach(nav => nav.classList.remove('active'));
+                // 为当前点击的导航项添加活动状态
                 this.classList.add('active');
+
+                // 隐藏所有内容区域
+                contentAreas.forEach(content => content.style.display = 'none');
+                
+                // 显示对应的内容区域
+                const category = this.getAttribute('data-category');
+                const targetContent = document.getElementById(`${category}-content`);
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                }
             });
         });
+
+        // 默认显示第一个类别
+        navItems[0].click();
     });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 价格分布图表
+            const priceCtx = document.getElementById('priceChart').getContext('2d');
+            new Chart(priceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [15, 45, 25, 10, 5],
+                        backgroundColor: 'rgba(0, 102, 204, 0.6)',
+                        borderColor: 'rgba(0, 102, 204, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 销售趋势图表
+            const trendCtx = document.getElementById('trendChart').getContext('2d');
+            new Chart(trendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [150, 180, 220, 280, 350, 420],
+                        borderColor: 'rgba(52, 199, 89, 1)',
+                        backgroundColor: 'rgba(52, 199, 89, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // 平台占比图表
+            const platformCtx = document.getElementById('platformChart').getContext('2d');
+            new Chart(platformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'SHEIN', '其他'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 厨房类别图表
+            const kitchenPriceCtx = document.getElementById('kitchenPriceChart').getContext('2d');
+            new Chart(kitchenPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-15', '$15-20', '$20-25', '$25+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [10, 35, 30, 20, 5],
+                        backgroundColor: 'rgba(255, 149, 0, 0.6)',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const kitchenTrendCtx = document.getElementById('kitchenTrendChart').getContext('2d');
+            new Chart(kitchenTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [180, 210, 250, 320, 380, 450],
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const kitchenPlatformCtx = document.getElementById('kitchenPlatformChart').getContext('2d');
+            new Chart(kitchenPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Walmart', '其他'],
+                    datasets: [{
+                        data: [40, 22, 18, 15, 5],
+                        backgroundColor: [
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 浴室类别图表
+            const bathroomPriceCtx = document.getElementById('bathroomPriceChart').getContext('2d');
+            new Chart(bathroomPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [12, 38, 28, 15, 7],
+                        backgroundColor: 'rgba(88, 86, 214, 0.6)',
+                        borderColor: 'rgba(88, 86, 214, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const bathroomTrendCtx = document.getElementById('bathroomTrendChart').getContext('2d');
+            new Chart(bathroomTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [160, 185, 230, 290, 340, 410],
+                        borderColor: 'rgba(88, 86, 214, 1)',
+                        backgroundColor: 'rgba(88, 86, 214, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const bathroomPlatformCtx = document.getElementById('bathroomPlatformChart').getContext('2d');
+            new Chart(bathroomPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Walmart', '其他'],
+                    datasets: [{
+                        data: [38, 25, 20, 12, 5],
+                        backgroundColor: [
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 清洁工具类别图表
+            const cleaningPriceCtx = document.getElementById('cleaningPriceChart').getContext('2d');
+            new Chart(cleaningPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-15', '$15-20', '$20-25', '$25+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [8, 32, 35, 18, 7],
+                        backgroundColor: 'rgba(52, 199, 89, 0.6)',
+                        borderColor: 'rgba(52, 199, 89, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const cleaningTrendCtx = document.getElementById('cleaningTrendChart').getContext('2d');
+            new Chart(cleaningTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [140, 165, 210, 260, 320, 380],
+                        borderColor: 'rgba(52, 199, 89, 1)',
+                        backgroundColor: 'rgba(52, 199, 89, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const cleaningPlatformCtx = document.getElementById('cleaningPlatformChart').getContext('2d');
+            new Chart(cleaningPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Walmart', '其他'],
+                    datasets: [{
+                        data: [35, 28, 20, 12, 5],
+                        backgroundColor: [
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 宠物用品类别图表
+            const petPriceCtx = document.getElementById('petPriceChart').getContext('2d');
+            new Chart(petPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [10, 35, 30, 18, 7],
+                        backgroundColor: 'rgba(255, 149, 0, 0.6)',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const petTrendCtx = document.getElementById('petTrendChart').getContext('2d');
+            new Chart(petTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [200, 240, 280, 350, 420, 500],
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const petPlatformCtx = document.getElementById('petPlatformChart').getContext('2d');
+            new Chart(petPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Chewy', '其他'],
+                    datasets: [{
+                        data: [40, 25, 15, 15, 5],
+                        backgroundColor: [
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 汽车用品类别图表
+            const carPriceCtx = document.getElementById('carPriceChart').getContext('2d');
+            new Chart(carPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [10, 35, 30, 18, 7],
+                        backgroundColor: 'rgba(255, 149, 0, 0.6)',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const carTrendCtx = document.getElementById('carTrendChart').getContext('2d');
+            new Chart(carTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [200, 240, 280, 350, 420, 500],
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const carPlatformCtx = document.getElementById('carPlatformChart').getContext('2d');
+            new Chart(carPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Chewy', '其他'],
+                    datasets: [{
+                        data: [40, 25, 15, 15, 5],
+                        backgroundColor: [
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 办公用品类别图表
+            const officePriceCtx = document.getElementById('officePriceChart').getContext('2d');
+            new Chart(officePriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [10, 35, 30, 18, 7],
+                        backgroundColor: 'rgba(255, 149, 0, 0.6)',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const officeTrendCtx = document.getElementById('officeTrendChart').getContext('2d');
+            new Chart(officeTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [200, 240, 280, 350, 420, 500],
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const officePlatformCtx = document.getElementById('officePlatformChart').getContext('2d');
+            new Chart(officePlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Chewy', '其他'],
+                    datasets: [{
+                        data: [40, 25, 15, 15, 5],
+                        backgroundColor: [
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // 个人护理类别图表
+            const personalPriceCtx = document.getElementById('personalPriceChart').getContext('2d');
+            new Chart(personalPriceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['$0-10', '$10-20', '$20-30', '$30-40', '$40+'],
+                    datasets: [{
+                        label: '产品数量',
+                        data: [10, 35, 30, 18, 7],
+                        backgroundColor: 'rgba(255, 149, 0, 0.6)',
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '产品数量'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '价格区间'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const personalTrendCtx = document.getElementById('personalTrendChart').getContext('2d');
+            new Chart(personalTrendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1月', '2月', '3月', '4月', '5月', '6月'],
+                    datasets: [{
+                        label: '销售额',
+                        data: [200, 240, 280, 350, 420, 500],
+                        borderColor: 'rgba(255, 149, 0, 1)',
+                        backgroundColor: 'rgba(255, 149, 0, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '销售额 (万美元)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        }
+                    }
+                }
+            });
+
+            const personalPlatformCtx = document.getElementById('personalPlatformChart').getContext('2d');
+            new Chart(personalPlatformCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Amazon', 'Shopee', 'Lazada', 'Chewy', '其他'],
+                    datasets: [{
+                        data: [40, 25, 15, 15, 5],
+                        backgroundColor: [
+                            'rgba(255, 149, 0, 0.8)',
+                            'rgba(52, 199, 89, 0.8)',
+                            'rgba(0, 102, 204, 0.8)',
+                            'rgba(88, 86, 214, 0.8)',
+                            'rgba(142, 142, 147, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
-</html>
+</html> 
