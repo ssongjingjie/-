@@ -1,0 +1,248 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: #1d1d1f;
+    background-color: #ffffff;
+}
+
+/* 导航栏样式 */
+.nav-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 0 22px;
+}
+
+.nav-item {
+    font-size: 12px;
+    color: #1d1d1f;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+    opacity: 0.8;
+}
+
+.nav-item:hover {
+    opacity: 1;
+    color: #0066cc;
+}
+
+/* 主内容区样式 */
+.main-content {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* 产品类别展示 */
+.category-section {
+    margin: 80px 0;
+}
+
+.category-title {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 产品网格布局 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* 产品卡片样式 */
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e5e5e7;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: .009em;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+}
+
+/* 产品特性列表 */
+.product-features {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #86868b;
+}
+
+.product-features p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 按钮样式 */
+.btn {
+    background: #0071e3;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    padding: 8px 16px;
+    border-radius: 980px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #0077ED;
+}
+
+/* 数据分析区域 */
+.analysis-section {
+    background: #f5f5f7;
+    border-radius: 30px;
+    padding: 60px 40px;
+    margin: 80px 0;
+}
+
+.chart-container {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.chart-container h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+}
+
+/* 选品建议区域 */
+.recommendation-section {
+    margin: 80px 0;
+}
+
+.recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.recommendation-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid #e5e5e7;
+}
+
+.recommendation-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 20px;
+}
+
+.recommendation-card ul {
+    list-style: none;
+}
+
+.recommendation-card li {
+    font-size: 14px;
+    color: #86868b;
+    margin: 12px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.recommendation-card li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #0066cc;
+}
+
+/* 响应式设计 */
+@media (max-width: 834px) {
+    .nav-menu {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .product-grid,
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 734px) {
+    .category-title {
+        font-size: 32px;
+    }
+    
+    .product-card {
+        padding: 20px;
+    }
+    
+    .analysis-section {
+        padding: 40px 20px;
+    }
+}
